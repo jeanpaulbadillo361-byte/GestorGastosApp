@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="GestorGastosApp.MainWindow"
+        Title="Gestor de Gastos Personales"
+        Width="820"
+        Height="560"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20" RowDefinitions="Auto,Auto,Auto,*,Auto">
+        <TextBlock Grid.Row="0"
+                   Text="Control de Gastos Personales"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Margin="0,0,0,15"/>
+
+        <Border Grid.Row="1" BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="6" Padding="15" Margin="0,0,0,12">
+            <Grid ColumnDefinitions="2*,1.5*,1*,1*" RowDefinitions="Auto,Auto">
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Descripción" Margin="0,0,10,4" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Categoría" Margin="0,0,10,4" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Monto ($)" Margin="0,0,10,4" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="0" Grid.Column="3" Text="Fecha (AAAA-MM-DD)" Margin="0,0,0,4" FontWeight="SemiBold"/>
+
+                <TextBox Grid.Row="1" Grid.Column="0" x:Name="TxtDescripcion" Watermark="Ej. Almuerzo universidad" Margin="0,0,10,0"/>
+                <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CmbCategoria" HorizontalAlignment="Stretch" Margin="0,0,10,0">
+                    <ComboBoxItem Content="Alimentación"/>
+                    <ComboBoxItem Content="Transporte"/>
+                    <ComboBoxItem Content="Universidad"/>
+                    <ComboBoxItem Content="Entretenimiento"/>
+                    <ComboBoxItem Content="Otros"/>
+                </ComboBox>
+                <TextBox Grid.Row="1" Grid.Column="2" x:Name="TxtMonto" Watermark="Ej. 15000" Margin="0,0,10,0"/>
+                <TextBox Grid.Row="1" Grid.Column="3" x:Name="TxtFecha" Watermark="2026-11-21"/>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="10" Margin="0,0,0,12">
+            <Button x:Name="BtnGuardar" Content="Guardar" Click="BtnGuardar_Click" Background="#2E7D32" Foreground="White" Padding="16,8"/>
+            <Button x:Name="BtnActualizar" Content="Actualizar" Click="BtnActualizar_Click" Background="#1565C0" Foreground="White" Padding="16,8"/>
+            <Button x:Name="BtnEliminar" Content="Eliminar" Click="BtnEliminar_Click" Background="#C62828" Foreground="White" Padding="16,8"/>
+            <Button x:Name="BtnLimpiar" Content="Limpiar" Click="BtnLimpiar_Click" Padding="16,8"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="3"
+                  x:Name="DgGastos"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  GridLinesVisibility="All"
+                  BorderThickness="1"
+                  BorderBrush="#CCCCCC"
+                  SelectionChanged="DgGastos_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                <DataGridTextColumn Header="Descripción" Binding="{Binding Descripcion}" Width="2*"/>
+                <DataGridTextColumn Header="Categoría" Binding="{Binding Categoria}" Width="1.2*"/>
+                <DataGridTextColumn Header="Monto" Binding="{Binding Monto}" Width="1*"/>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Row="4" Background="#F4F4F4" CornerRadius="4" Padding="10" Margin="0,12,0,0">
+            <TextBlock x:Name="TxtMensaje" Text="Listo." FontWeight="SemiBold"/>
+        </Border>
+    </Grid>
+</Window>
