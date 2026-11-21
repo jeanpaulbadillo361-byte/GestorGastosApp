@@ -64,7 +64,7 @@ Desde la carpeta `GestorGastosApp`, ejecutar `dotnet restore` y luego `dotnet ru
 
 ## 6.8. Evidencias de funcionamiento
 1. **Registro:** ![Registro](12d4d087-ae05-4772-8fbf-e99b647a9a3f.jpeg) Se registra un gasto y se muestra la confirmación en la ventana junto con los datos en la tabla.
-2. **Consulta:** ![Consulta](12d4d087-ae05-4772-8fbf-e99b) Se visualizan los registros almacenados cargados en el `DataGrid`.
+2. **Consulta:** ![Consulta](89b16fd2-9c33-4c6b-adbe-59261db468e9.jpeg) Se visualizan los registros almacenados cargados en el `DataGrid`.
 3. **Actualización:** ![Actualización](2a186613-2cde-4b8d-87aa-c66ea4de4bb1.jpeg) Se modifica un gasto (por ejemplo, ajustando su monto) y se refleja el cambio en la tabla.
 4. **Eliminación:** ![Eliminación](evidencias/04_eliminacion.png) Se elimina un gasto y se muestra el mensaje de eliminación correcta en la barra inferior.
 5. **Validación:** ![Validación](evidencias/05_validacion.png) Al ingresar un monto inválido (como `-20000`), el programa avisa en pantalla sin cerrarse.
