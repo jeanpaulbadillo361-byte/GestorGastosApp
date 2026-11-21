@@ -67,8 +67,8 @@ Desde la carpeta `GestorGastosApp`, ejecutar `dotnet restore` y luego `dotnet ru
 2. **Consulta:** ![Consulta](89b16fd2-9c33-4c6b-adbe-59261db468e9.jpeg) Se visualizan los registros almacenados cargados en el `DataGrid`.
 3. **Actualización:** ![Actualización](2a186613-2cde-4b8d-87aa-c66ea4de4bb1.jpeg) Se modifica un gasto (por ejemplo, ajustando su monto) y se refleja el cambio en la tabla.
 4. **Eliminación:** ![Eliminación](79c33667-2f8f-4e05-85db-c0b8cdec58d3.jpeg) Se elimina un gasto y se muestra el mensaje de eliminación correcta en la barra inferior.
-5. **Validación:** ![Validación](6a650f65-f988-4f6c-bfe9-94ad9be93816.jpeg) Al ingresar un monto inválido (como `-20000`), el programa avisa en pantalla sin cerrarse.
-6. **Persistencia:** ![Persistencia](evidencias/06_persistencia.png) Al ejecutar nuevamente `dotnet run`, los registros guardados continúan disponibles.
+5. **Validación:** ![Validación](79c33667-2f8f-4e05-85db-c0b8cdec58d3.jpeg) Al ingresar un monto inválido (como `-20000`), el programa avisa en pantalla sin cerrarse.
+6. **Persistencia:** ![Persistencia](6a650f65-f988-4f6c-bfe9-94ad9be93816.jpeg) Al ejecutar nuevamente `dotnet run`, los registros guardados continúan disponibles.
 
 ## 6.9. Problemas encontrados y soluciones
 * **Comando `dotnet` no reconocido al inicio:** Se instaló el .NET 8.0 SDK y se abrió una nueva consola para verificar `dotnet --version`.
